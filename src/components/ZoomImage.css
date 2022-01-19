@@ -3,7 +3,9 @@
 
 
 /* لون خلفية الصفحة */
-body{background: #DDCECD;}
+body{
+	background: linear-gradient( 135deg, rgba(129, 255, 239, 0.50) 10%, rgba(240, 103, 180, 0.65) 100%);
+}
 
 #container-zoom {
 	display: flex;
@@ -11,16 +13,15 @@ body{background: #DDCECD;}
 	width: auto;
 	max-width: 500px;
 	height: auto;
-	margin: 5em auto;
+	max-height: 100%;
+	margin: 1em auto;
 	overflow: hidden;
 	border: 10px solid #EEE5E5;
 	outline: 5px dashed #EEE5E5;
-
 	position: relative;
-/* 	z-index: 1; */
-	
-	
+/* 	z-index: 1; */	
 }
+
 #container img {
 	width: 100%;
 	height: 100%;
@@ -32,12 +33,6 @@ body{background: #DDCECD;}
 }
 
 
-/* الطريقة الاولي */
-/* عندما المس الصورة قم بتكبيرها */
-/* #container img:hover {transform: scale(1.2, 1.2);} */
-
-/* الطريقة الثانية */
-/* عندما المس الحاوية قم بتكبير الصورة */
 #container:hover img {
 	transform: scale(1.2, 1.2);
 	z-index: 9;
@@ -54,7 +49,7 @@ body{background: #DDCECD;}
     background-image: linear-gradient( 135deg, rgba(129, 255, 239, 0.50) 10%, rgba(240, 103, 180, 0.65) 100%);
 	opacity: 1;
 	transition: 0.3s linear;
-	color: #FFF;
+	color: rgb(27, 170, 237);
 	font-family: 'Bellefair', serif;
 font-family: 'Satisfy', cursive;
 /* font-family: 'Slabo 27px', serif; */
