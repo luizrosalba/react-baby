@@ -1,8 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Bad+Script|Bellefair|Comfortaa|Satisfy|Slabo+27px|Vidaloka');
 
-
-
-/* لون خلفية الصفحة */
 body{
 	background: linear-gradient( 135deg, rgba(129, 255, 239, 0.50) 10%, rgba(240, 103, 180, 0.65) 100%);
 }

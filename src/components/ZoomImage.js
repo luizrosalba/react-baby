@@ -1,16 +1,18 @@
 import React from 'react';
 import CountComp from './Countdown';
 import './ZoomImage.css';
+import { babyLinks } from '../util/baby-links';
 
 function ZoomImage() {
-
+    const tam = babyLinks.links.length-1;
+    const sorteio = Math.floor(Math.random() * tam);
     return (
         <div id="container-zoom">
             <a 
                 href="https://www.facebook.com/groups/ElzeroWebSchool/" 
                 target="_blank">
                 <img 
-                    src="https://images.unsplash.com/photo-1548897969-80be2924dc9f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80" 
+                    src={babyLinks.links[sorteio]} 
                     alt="Omar">
                 </img> 
             </a>
