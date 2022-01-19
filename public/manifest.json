@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Contdown do bebê",
+  "name": "Contador do tempo do bebê",
   "icons": [
     {
       "src": "favicon.ico",
