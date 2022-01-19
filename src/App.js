@@ -1,8 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 import Container from 'react-bootstrap/Container'
-import CountComp from './components/Countdown';
-import CarouselComp from './components/Carrousel'
+import ZoomImage from './components/ZoomImage'
 
 function App() {
   const timestamp = 1660262400000;
@@ -25,8 +24,8 @@ function App() {
       <header className="App-header">
         {/* <img src={logo} className="App-logo" alt="logo" /> */}
         <Container>
-          <CountComp />
-          <CarouselComp/>
+          <ZoomImage />
+          
         </Container>
       </header>
     </div>

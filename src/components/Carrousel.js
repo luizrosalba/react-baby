@@ -2,33 +2,33 @@ import React from 'react';
 import Carousel from 'react-bootstrap/Carousel'
 import { babyLinks } from '../util/baby-links'
 
-// const Wrapper = (props) => {
-// 	return (
-// 		<Carousel 
-// 		variant="dark"
-// 		controls={true}
-// 		fade={true}
-// 		>
-// 		{props.children}
+function Wrapper (props) {
+	return (
+		<Carousel 
+		variant="dark"
+		controls={true}
+		fade={true}
+		>
+		{props.children}
 
-// 		</Carousel>
-// 	)
-// }
+		</Carousel>
+	)
+}
 
-// function CarouselItens(props) {
-// 	return( 
-// 		<Carousel.Item>
-// 		<img
-// 			className="d-block w-20"
-// 			src= {babyLinks.links[0]}
-// 			alt="First slide"
-// 		/>
-// 		<Carousel.Caption>
-// 		<h5>Bebê 1</h5>
-// 		</Carousel.Caption>
-// 		</Carousel.Item>
-// 	)
-// }
+function CarouselItens(props) {
+	return( 
+		<Carousel.Item>
+		<img
+			className="d-block w-20"
+			src= {babyLinks.links[0]}
+			alt="First slide"
+		/>
+		<Carousel.Caption>
+		<h5>Bebê 1</h5>
+		</Carousel.Caption>
+		</Carousel.Item>
+	)
+}
 
 // function CarouselComp(props) {
 // 	const ListItens = ['1','2','3'].map((number) =>

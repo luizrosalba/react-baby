@@ -17,20 +17,16 @@ function CountComp() {
         return <Completionist />;
       } else {
         // Render a countdown
-        return <span>{days} dias {hours} horas {minutes} minutos {seconds} segundos </span>;
+        return <span>Faltam {days} dias {hours} horas {minutes} minutos {seconds} segundos </span>;
       }
     };
     return (
       <div className="App">
         <header className="App-header">
           {/* <img src={logo} className="App-logo" alt="logo" /> */}
-  
           <Container>
           <Row>
             <Col> 
-              <p>
-                It's the final countdown
-              </p>
               <Countdown 
                 date={dateObj}
                 renderer={renderer}
