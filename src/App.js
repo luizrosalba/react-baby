@@ -7,32 +7,23 @@ import * as api from './api/AppRequests'
 import { API_COUNTER_MENINO, API_COUNTER_MENINA, API_COUNTER_NAMESPACE } from './util/constants'
 
 function App() {
-  const timestamp = 1660262400000;
-  var dateObj = new Date(timestamp);
   // Random component
   const Completionist = () => <span>It's Baby time!</span>;
   const [menino, setMenino] = useState(0);
   const [menina, setMenina] = useState(0);
   
-  // Renderer callback with condition
-  const renderer = ({ days, hours, minutes, seconds, completed }) => {
-    if (completed) {
-      // Render a completed state
-      return <Completionist />;
-    } else {
-      // Render a countdown
-      const element =  <span style={{fontSize: '30px'}}> Faltam {days} dias {hours} horas {minutes} minutos {seconds} segundos </span>;
-      return element
-    }
-  };
   useEffect(() => {
     // Atualiza as contagens da API
     console.log('UseEffect')
   });
-  const getVal = async () => {
-    const value = await api.getValue(API_COUNTER_MENINO, API_COUNTER_NAMESPACE)
-    return value
+
+  const getCount = (key) => {
+    api.getValue(key, API_COUNTER_NAMESPACE)
+      .then( ans =>{
+        console.log('result', ans)
+      })
   }
+
   return (
     <div className="App">
       <header className="App-header">
@@ -44,7 +35,7 @@ function App() {
             justifyContent: 'space-around'
             }}>
             <Button
-              onClick={()=>{console.log('get', getVal())}}>
+              onClick={()=>{getCount(API_COUNTER_MENINO)}}>
                 Menino
             </Button>
             <Button

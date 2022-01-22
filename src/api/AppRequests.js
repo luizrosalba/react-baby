@@ -1,13 +1,12 @@
 import countapi from 'countapi-js';
 
-export const getValue = async (key, namespace) => {
+export const getValue = (key, namespace) => {
     if (key && namespace){
-        countapi.get(namespace, key).then(
-            (result) =>{
-                return result;
-            }
-        )
-        console.log('dad', key, namespace)
+       return countapi.get(namespace, key)
+       .then((result) =>{
+            return result.value;
+        })
+        
     }else {
         return ("Please provide key and namespace");
     }
@@ -15,7 +14,7 @@ export const getValue = async (key, namespace) => {
 
 export const setKeyValue = async (key, namespace, value) => {
     if (key!==null && namespace!==null && value!==null)
-        countapi.set(namespace, key, value).then(
+        return countapi.set(namespace, key, value).then(
             (result) =>{
                 return result;
             }
@@ -27,7 +26,7 @@ export const setKeyValue = async (key, namespace, value) => {
 
 export const getInfoKey = async (key, namespace) => {
     if (key && namespace)
-        countapi.info(namespace, key).then(
+        return countapi.info(namespace, key).then(
             (result) =>{
                 return result;
             }
@@ -39,7 +38,7 @@ export const getInfoKey = async (key, namespace) => {
 
 export const updateKeyValue = async (key, namespace, amount) => {
     if (key!==null && namespace!==null && amount!==null)
-        countapi.update(namespace, key, amount).then(
+        return countapi.update(namespace, key, amount).then(
             (result) =>{
                 return result;
             }
