@@ -14,13 +14,22 @@ function App() {
   
   useEffect(() => {
     // Atualiza as contagens da API
-    console.log('UseEffect')
+    api.getValue(API_COUNTER_MENINO, API_COUNTER_NAMESPACE)
+    .then( ans =>{
+      setMenino(ans)
+    })
+
+    api.getValue(API_COUNTER_MENINA, API_COUNTER_NAMESPACE)
+    .then( ans =>{
+      setMenina(ans)
+    })
+
   });
 
-  const getCount = (key) => {
-    api.getValue(key, API_COUNTER_NAMESPACE)
+  const updateKeyValue = (key) => {
+    api.updateKeyValue(key, API_COUNTER_NAMESPACE , 1)
       .then( ans =>{
-        console.log('result', ans)
+        key===API_COUNTER_MENINO?setMenino(ans.value):setMenina(ans.value);
       })
   }
 
@@ -35,11 +44,11 @@ function App() {
             justifyContent: 'space-around'
             }}>
             <Button
-              onClick={()=>{getCount(API_COUNTER_MENINO)}}>
+              onClick={()=>{updateKeyValue(API_COUNTER_MENINO)}}>
                 Menino
             </Button>
             <Button
-              onClick={()=>{console.log("Menina")}}>
+              onClick={()=>{updateKeyValue(API_COUNTER_MENINA)}}>
                 Menina
             </Button>
           </div>
