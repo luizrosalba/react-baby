@@ -27,7 +27,7 @@ function App() {
 
   });
   
-  const updateKeyValue = () => {
+  const updateKeyValue = (key) => {
     setShowThanks(true);
     api.updateKeyValue(key, API_COUNTER_NAMESPACE , 1)
       .then( ans =>{
