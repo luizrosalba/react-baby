@@ -44,10 +44,12 @@ function App() {
             justifyContent: 'space-around'
             }}>
             <Button
+              style={{color:"#00005c", color: "white", fontSize:"30px", margin: "10px", boxShadow: "5px 5px 3px rgba(46, 46, 46, 0.62)"}} outline
               onClick={()=>{updateKeyValue(API_COUNTER_MENINO)}}>
                 Menino
             </Button>
             <Button
+              style={{backgroundColor:"#FFB6C1", fontSize:"30px", color: "white", margin: "10px", boxShadow: "5px 5px 3px rgba(46, 46, 46, 0.62)"}} outline
               onClick={()=>{updateKeyValue(API_COUNTER_MENINA)}}>
                 Menina
             </Button>
