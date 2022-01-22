@@ -28,7 +28,7 @@ function CountComp() {
           {/* <img src={logo} className="App-logo" alt="logo" /> */}
           <Container>
           <Row>
-            <Col> 
+            <Col style={{marginTop: '20px'}}>  
               <Countdown 
                 date={dateObj}
                 renderer={renderer}
