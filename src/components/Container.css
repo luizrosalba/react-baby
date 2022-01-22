@@ -1,0 +1,7 @@
+.text-caixa{
+    font-size: 1.2em;
+    position: relative;
+    top: 45vh;
+    display: flex;
+    justify-content: center;
+}

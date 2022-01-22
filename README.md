@@ -1,9 +1,17 @@
+# Bebe-react 
+
+
 ## deploy 
 
 npm run deploy
 
+## no portable : 
 
-# Getting Started with Create React App
+http://ip:3000/react-baby
+
+
+
+
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 

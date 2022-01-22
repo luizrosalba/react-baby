@@ -1,8 +1,7 @@
 import React from 'react';
 import Container from 'react-bootstrap/Container'
-import Row from 'react-bootstrap/Row'
-import Col from 'react-bootstrap/Col'
 import Countdown from 'react-countdown';
+import './Container.css';
 
 function CountComp() {
     const timestamp = 1660262400000;
@@ -17,28 +16,21 @@ function CountComp() {
         return <Completionist />;
       } else {
         // Render a countdown
-        const element =  <span style={{fontSize: '30px'}}> Faltam {days} dias {hours} horas {minutes} minutos {seconds} segundos </span>;
+        const element =  <div 
+          className='text-caixa'>
+            Faltam {days} dias {hours} horas {minutes} minutos {seconds} segundos 
+        </div>;
  
         return element
       }
     };
     return (
-      <div className="App">
-        <header className="App-header">
-          {/* <img src={logo} className="App-logo" alt="logo" /> */}
-          <Container>
-          <Row>
-            <Col style={{marginTop: '20px'}}>  
-              <Countdown 
-                date={dateObj}
-                renderer={renderer}
-              />
-            </Col>
-          </Row>
-        </Container>
-  
-        </header>
-      </div>
+      <Container>
+        <Countdown 
+          date={dateObj}
+          renderer={renderer}
+        />
+      </Container>
     );
   }
   

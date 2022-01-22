@@ -8,18 +8,16 @@ function ZoomImage() {
     const sorteio = Math.floor(Math.random() * tam);
     return (
         <div id="container-zoom">
-            <a 
-                href="https://www.facebook.com/groups/ElzeroWebSchool/" 
-                target="_blank">
-                <img 
-                    src={babyLinks.links[sorteio]} 
-                    alt="Omar">
-                </img> 
-            </a>
+            <img 
+                src={babyLinks.links[sorteio]} 
+                alt="Omar">
+            </img> 
             <div className="box-text">
                 <center><h1>Esta chegando a</h1></center>
                 <h2><center>Hora de me amar !</center></h2>
-                <h2><CountComp /></h2>
+                <div className='Tempo' style={{position:'relative', bottom:'0px'}}>
+                    <h2><CountComp /></h2>
+                </div>
             </div>
         </div>
     )
