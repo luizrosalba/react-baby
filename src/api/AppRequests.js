@@ -1,134 +1,50 @@
-import api from "./Requests"
+import countapi from 'countapi-js';
 
-export async function serverAlive() {
-    try {
-        return api.get("/isAlive").then(
-        (res) => {
-            if (res.data==="Server Alive"){
-                return(true)
-            }else{
-                return("")
+export const getValue = async (key, namespace) => {
+    if (key && namespace){
+        countapi.get(namespace, key).then(
+            (result) =>{
+                return result;
             }
-        })
-    }catch(e) {
-        console.error("Failed to require service");
-        throw e;      
+        )
+        console.log('dad', key, namespace)
+    }else {
+        return ("Please provide key and namespace");
     }
-}
+};
 
-export const getKeyValue = (namespace, key) => 
-new Promise((resolve, reject) => {
-    let data= {
-        namespace, 
-        key
+export const setKeyValue = async (key, namespace, value) => {
+    if (key!==null && namespace!==null && value!==null)
+        countapi.set(namespace, key, value).then(
+            (result) =>{
+                return result;
+            }
+        )
+    else {
+        return("Error");
     }
-    try {
-        return api.post("/counter/accesses",data)
-        .then((res) =>{
-            (res.data)? 
-                resolve(res.data)
-            :
-                reject("")
-        })
-    }catch(e) {
-        console.log("Failed to get key value API");
-        throw e;      
-    }
-})
+};
 
-export const setKeyValue = (namespace, key, value) => 
-    new Promise((resolve, reject) => {
-    try {
-        let data={
-            namespace, 
-            key,
-            value
-        }
-        return api.post("/counter/setKeyValue", data).then(
-            (res) => 
-            {(res.data)?
-                resolve(res.data)
-                :
-                reject("")
-        })
-    }catch(e) {
-        console.error("Failed to set key value API");
-        throw e;      
+export const getInfoKey = async (key, namespace) => {
+    if (key && namespace)
+        countapi.info(namespace, key).then(
+            (result) =>{
+                return result;
+            }
+        )
+    else {
+        return("Error");
     }
-})
+};
 
-export const getInfoKey = (namespace, key) => 
-    new Promise((resolve, reject) => {
-    try {
-        let data= {
-            namespace, 
-            key
-        }
-        return api.post("/counter/getInfoKey", data).then(
-            (res) => 
-            {(res.data)?
-                resolve(res.data)
-                :
-                reject("")    
-        })
-    }catch(e) {
-        console.error("Failed to get Info key API");
-        throw e;      
+export const updateKeyValue = async (key, namespace, amount) => {
+    if (key!==null && namespace!==null && amount!==null)
+        countapi.update(namespace, key, amount).then(
+            (result) =>{
+                return result;
+            }
+        )
+    else {
+        return("Error");
     }
-})
-
-export const updateKeyValue = (namespace, key, amount) => 
-    new Promise((resolve, reject) => {
-    try {
-        let data= {
-            namespace, 
-            key,
-            amount
-        }
-        return api.post("/counter/updateKeyValue", data).then(
-            (res) => 
-            {(res.data)?
-                resolve(res.data)
-                :
-                reject("")    
-        })
-    }catch(e) {
-        console.error("Failed to update key value API");
-        throw e;      
-    }
-})
-
-export const getUserInfo = (id) => 
-    new Promise((resolve, reject) => {
-    try {
-        let data= {
-            id
-        }
-        return api.post("/users/getUserByID", data).then(
-            (res) => 
-            {(res.data)?
-                resolve(res.data)
-                :
-                reject("")    
-        })
-    }catch(e) {
-        console.error("Failed to get user info");
-        throw e;      
-    }
-})
-
-export const createUser = (data) => 
-    new Promise((resolve, reject) => {
-    try {
-        return api.post("/users/createUser", data).then(
-            (res) => 
-            {(res.data)?
-                resolve(res.data)
-                :
-                reject("")    
-        })
-    }catch(e) {
-        console.error("Failed to create user");
-        throw e;      
-    }
-})
+};

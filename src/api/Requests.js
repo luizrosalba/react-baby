@@ -1,6 +1,6 @@
 import {
-    API_URL_DEV, 
-    //API_URL_PROD
+    //API_URL_DEV, 
+    API_URL_PROD
 } from "../util/constants"
 
 const axios = require('axios');
@@ -10,7 +10,7 @@ let headers = {
 };
 
 const api = axios.create({
-  baseURL: API_URL_DEV,
+  baseURL: API_URL_PROD,
   timeout: 20000, 
   headers
 }); 

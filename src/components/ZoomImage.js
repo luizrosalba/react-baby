@@ -16,7 +16,7 @@ function ZoomImage() {
                     alt="Omar">
                 </img> 
             </a>
-            <div classNameco="box-text">
+            <div className="box-text">
                 <h1>Estou chegando!</h1>
                 <h2><center>Me amem!</center></h2>
                 <h2><CountComp /></h2>

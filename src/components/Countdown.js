@@ -17,7 +17,9 @@ function CountComp() {
         return <Completionist />;
       } else {
         // Render a countdown
-        return <span>Faltam {days} dias {hours} horas {minutes} minutos {seconds} segundos </span>;
+        const element =  <span style={{fontSize: '30px'}}> Faltam {days} dias {hours} horas {minutes} minutos {seconds} segundos </span>;
+ 
+        return element
       }
     };
     return (

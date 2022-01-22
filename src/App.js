@@ -4,6 +4,7 @@ import Container from 'react-bootstrap/Container'
 import Button from 'react-bootstrap/Button'
 import ZoomImage from './components/ZoomImage'
 import * as api from './api/AppRequests'
+import { API_COUNTER_MENINO, API_COUNTER_MENINA, API_COUNTER_NAMESPACE } from './util/constants'
 
 function App() {
   const timestamp = 1660262400000;
@@ -20,13 +21,18 @@ function App() {
       return <Completionist />;
     } else {
       // Render a countdown
-      return <span>{days} dias {hours} horas {minutes} minutos {seconds} segundos </span>;
+      const element =  <span style={{fontSize: '30px'}}> Faltam {days} dias {hours} horas {minutes} minutos {seconds} segundos </span>;
+      return element
     }
   };
   useEffect(() => {
     // Atualiza as contagens da API
-    console.log('ola')
+    console.log('UseEffect')
   });
+  const getVal = async () => {
+    const value = await api.getValue(API_COUNTER_MENINO, API_COUNTER_NAMESPACE)
+    return value
+  }
   return (
     <div className="App">
       <header className="App-header">
@@ -38,7 +44,7 @@ function App() {
             justifyContent: 'space-around'
             }}>
             <Button
-              onClick={()=>{console.log("Menino")}}>
+              onClick={()=>{console.log('get', getVal())}}>
                 Menino
             </Button>
             <Button
