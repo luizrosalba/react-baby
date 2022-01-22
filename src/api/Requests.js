@@ -1,7 +1,7 @@
 import {
     API_URL_DEV, 
     //API_URL_PROD
-} from "../utils/constants"
+} from "../util/constants"
 
 const axios = require('axios');
 

@@ -3,6 +3,7 @@ import './App.css';
 import Container from 'react-bootstrap/Container'
 import Button from 'react-bootstrap/Button'
 import ZoomImage from './components/ZoomImage'
+import * as api from './api/AppRequests'
 
 function App() {
   const timestamp = 1660262400000;
@@ -24,7 +25,7 @@ function App() {
   };
   useEffect(() => {
     // Atualiza as contagens da API
-    
+    console.log('ola')
   });
   return (
     <div className="App">
