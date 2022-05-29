@@ -27,12 +27,6 @@ body{
 	z-index: 2;
 }
 
-
-#container:hover img {
-	transform: scale(1.2, 1.2);
-	z-index: 9;
-}
-
 .box-text {
 	width: 100%;
 	height: 100%;
@@ -58,4 +52,3 @@ font-family: 'Satisfy', cursive;
 font-family: 'Comfortaa', cursive;
 }
 .box-text p {font-size: 1.5em;}
-.box-text:hover{opacity: 0;}

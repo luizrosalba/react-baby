@@ -15,7 +15,7 @@ function ZoomImage() {
             <div className="box-text">
                 <center><h1>Esta chegando a</h1></center>
                 <h2><center>Hora de me amar !</center></h2>
-                <div className='Tempo' style={{position:'relative', bottom:'0px'}}>
+                <div className='Tempo' style={{position:'relative', top:'0px'}}>
                     <h2><CountComp /></h2>
                 </div>
             </div>

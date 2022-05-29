@@ -4,10 +4,10 @@ import Countdown from 'react-countdown';
 import './Container.css';
 
 function CountComp() {
-    const timestamp = 1660262400000;
+    const timestamp = 1662951600000;
     var dateObj = new Date(timestamp);
     // Random component
-    const Completionist = () => <span>You are good to go!</span>;
+    const Completionist = () => <span>Welcome Ana Clara !</span>;
   
     // Renderer callback with condition
     const renderer = ({ days, hours, minutes, seconds, completed }) => {
