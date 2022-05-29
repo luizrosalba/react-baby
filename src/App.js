@@ -10,12 +10,6 @@ function App() {
       <header className="App-header">
         <Container>
           <ZoomImage />
-          <div style={{
-            display: 'flex',
-            justifyContent: 'space-around',
-            height: '90vh'
-            }}>
-          </div>
         </Container>
       </header>
     </div>

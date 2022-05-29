@@ -18,11 +18,13 @@ function CountComp() {
         // Render a countdown
         const element =  
         <>
-          <div className='text-caixa-semanas'>  
-            {days/7} semanas
-          </div>
-          <div className='text-caixa-dias'>  
-              <div> {days} dias {hours} horas {minutes} minutos</div> 
+        <div className='align-bottom'>
+            <div className='text-caixa-semanas'>  
+              Faltam {days/7} semanas
+            </div>
+            <div className='text-caixa-dias'>  
+                <div> {days} dias {hours} horas {minutes} minutos</div> 
+            </div>
           </div>
         </>
         return element
