@@ -16,14 +16,18 @@ function CountComp() {
         return <Completionist />;
       } else {
         // Render a countdown
-        const element =  <div 
-          className='text-caixa'>
-            Faltam {days} dias {hours} horas {minutes} minutos {seconds} segundos 
-        </div>;
- 
+        const element =  
+        <>
+          <div className='text-caixa-semanas'>  
+            {days/7} semanas
+          </div>
+          <div className='text-caixa-dias'>  
+              <div> {days} dias {hours} horas {minutes} minutos</div> 
+          </div>
+        </>
         return element
       }
-    };
+    }
     return (
       <Container>
         <Countdown 

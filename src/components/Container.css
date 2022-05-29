@@ -1,7 +1,13 @@
-.text-caixa{
+.text-caixa-dias{
     font-size: 1.2em;
-    position: relative;
-    top: 35vh;
     display: flex;
     justify-content: center;
+    
 }
+.text-caixa-semanas{
+    font-size: 1.2em;
+    display: flex;
+    justify-content: center;
+
+}
+
