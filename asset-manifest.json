@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/react-baby/static/css/main.18160a1c.css",
-    "main.js": "/react-baby/static/js/main.5e8f3c83.js",
+    "main.css": "/react-baby/static/css/main.70d0b5cb.css",
+    "main.js": "/react-baby/static/js/main.58ca4196.js",
     "static/js/787.97e3bf57.chunk.js": "/react-baby/static/js/787.97e3bf57.chunk.js",
     "index.html": "/react-baby/index.html",
-    "main.18160a1c.css.map": "/react-baby/static/css/main.18160a1c.css.map",
-    "main.5e8f3c83.js.map": "/react-baby/static/js/main.5e8f3c83.js.map",
+    "main.70d0b5cb.css.map": "/react-baby/static/css/main.70d0b5cb.css.map",
+    "main.58ca4196.js.map": "/react-baby/static/js/main.58ca4196.js.map",
     "787.97e3bf57.chunk.js.map": "/react-baby/static/js/787.97e3bf57.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.18160a1c.css",
-    "static/js/main.5e8f3c83.js"
+    "static/css/main.70d0b5cb.css",
+    "static/js/main.58ca4196.js"
   ]
 }
