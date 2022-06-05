@@ -20,7 +20,7 @@ function CountComp() {
         <>
         <div className='align-bottom'>
             <div className='text-caixa-semanas'>  
-              Faltam {days/7} semanas
+              Faltam { parseInt(days/7) } semanas
             </div>
             <div className='text-caixa-dias'>  
                 <div> {days} dias {hours} horas {minutes} minutos</div> 
